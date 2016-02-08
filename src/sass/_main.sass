@@ -1,1 +1,83 @@
 // Normally mainpage styles
+
+// header
+
+.header
+	background: #fff
+	border-bottom: 1px solid #008bce
+	height: 100px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	&__in
+		position: relative
+		height: 100px
+		+vertical
+	.logo
+		float: left
+		margin-top: 30px
+	.callback
+		float: right
+		margin-top: 20px
+	.nav
+		text-align: center
+		display: inline-block
+		vertical-align: middle
+.callback
+	&__phone
+		color: #020624
+		+bold
+		font-size: 30px
+		letter-spacing: .03em
+		display: block
+		margin-bottom: 13px
+
+.screen
+	height: calc(100vh - 100px)
+	min-height: 700px
+	background-position: center center
+	background-attachment: fixed
+	background-size: cover
+	+vertical
+	color: #fff
+	padding: 50px 0
+	+rh(972)
+		height: auto
+	&__in
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		width: 1310px
+		max-width: 100%
+		padding: 0 15px
+		> .btn
+			display: inline-block
+			margin-bottom: 50px
+	&__header
+		margin-bottom: 35px
+	&__title
+		max-width: 800px
+		margin: 0 auto
+	&__about
+		max-width: 725px
+		margin: 0 auto
+		border-top: 1px solid #8a8d91
+		font-size: 36px
+		padding-top: 15px
+		+bold
+	&__col
+		width: 50%
+		float: left
+		padding: 75px 25px
+		font-size: 18px
+		&:first-child
+			padding-left: 85px
+		&:last-child
+			padding-right: 85px
+	&__description
+		text-align: left
+		+clr
+		background: rgba(#161c23, .6)
+		margin-bottom: 50px
+

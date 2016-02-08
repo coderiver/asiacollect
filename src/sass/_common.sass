@@ -28,9 +28,83 @@
 // =book
 // 	font-family: "book", Arial, sans-serif
 
+$primary: #50c1d7
+$accent: #b21010
+
++font(AvenirNextLTPro-Bold, AvenirNextLTPro-Bold)
++font(AvenirNextLTPro-Regular, AvenirNextLTPro-Regular)
++font(helveticaneuecyr-lightitalic, helveticaneuecyr-lightitalic)
++font(Agency_FB, Agency_FB)
+
+=reg
+	font-family: 'AvenirNextLTPro-Regular', Helvetica, Arial, sans-serif
+
+=bold
+	font-family: 'AvenirNextLTPro-Bold', Helvetica, Arial, sans-serif
+
+=helv
+	font-family: 'helveticaneuecyr-lightitalic', Helvetica, Arial, sans-serif
+
+=agency
+	font-family: 'Agency_FB', "Courier New", Courier, monospace
+
+%in
+	width: 1310px
+	max-width: 100%
+	padding: 0 15px
+	margin: 0 auto
+	+clr
+.l
+	@extend %in
+.i-icon, [class^="i-icon-"], [class*=" i-icon-"]
+	display: inline-block
+
+.i-icon-logo
+	+sr(logo)
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	+reg
+	font-size: 14px
 	line-height: 1.4
-	
+	padding-top: 100px
 // common blocks
+a
+	text-decoration: none
+.logo
+	+hide-text
+
+.btn
+	font-size: 24px
+	color: #fff
+	padding: 22px 54px 19px
+	+bold
+	transition: background .3s, color .3s
+	&_red
+		background: $accent
+		&:hover
+			background: $primary
+	&_blue
+		background: $primary
+		&:hover
+			background: $accent
+	&_white
+		background: rgba(#fff, .6)
+		color: #37404c
+		&:hover
+			background: rgba($primary , .6)
+			color: #fff
+
+.nav
+	text-align: center
+	+clr
+	> li
+		float: left
+		margin: 0 5px
+		a
+			display: inline-block
+			padding: 0 10px
+			color: #020624
+			font-size: 18px
+
+h1, .h1
+	font-size: 60px
+	text-transform: uppercase
