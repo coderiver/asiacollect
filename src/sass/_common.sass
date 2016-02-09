@@ -61,6 +61,8 @@ $accent: #b21010
 
 .i-icon-logo
 	+sr(logo)
+.i-icon-text
+	+sr(close)
 body
 	+reg
 	font-size: 14px
@@ -69,15 +71,19 @@ body
 // common blocks
 a
 	text-decoration: none
+strong, b
+	+bold
 .logo
 	+hide-text
 
 .btn
 	font-size: 24px
 	color: #fff
-	padding: 22px 54px 19px
+	padding: 25px 54px 22px
+	text-align: center
 	+bold
 	transition: background .3s, color .3s
+	line-height: 1
 	&_red
 		background: $accent
 		&:hover
@@ -92,6 +98,9 @@ a
 		&:hover
 			background: rgba($primary , .6)
 			color: #fff
+	&_full
+		display: block
+		width: 100%
 
 .nav
 	text-align: center
@@ -104,7 +113,104 @@ a
 			padding: 0 10px
 			color: #020624
 			font-size: 18px
+	+r(1100)
+
+		position: fixed
+		top: 0
+		left: 0
+		background: #fff
+		width: 280px
+		bottom: 0
+		box-shadow: 0 0 5px #000
+		transform: translate(-100%) scale(.9)
+		+tr(transform .3s)
+		&.is-open
+			transform: translate(0) scale(1)
+		> li
+			display: block
+			float: none
+			a
+				padding: 10px
 
 h1, .h1
 	font-size: 60px
 	text-transform: uppercase
+
+h2, .h2
+	font-size: 36px
+	+bold
+
+h3, .h3
+	font-size: 30px
+	+bold
+h4, .h4
+	font-size: 24px
+	+bold
+	
+.popup
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background: rgba(#000, .6)
+	z-index: 200
+	+vertical
+	padding: 20px
+	overflow-y: auto
+	transition: visibility .3s, opacity .3s
+	visibility: hidden
+	opacity: 0
+	&.is-open
+		visibility: visible
+		opacity: 1
+		.popup__in
+			transform: scale(1)
+	&__in
+		display: inline-block
+		vertical-align: middle
+		width: 855px
+		max-width: 100%
+		padding: 110px 140px 45px
+		background: #fff
+		position: relative
+		transform: scale(.9)
+		+tr(transform .3s)
+	&__close
+		position: absolute
+		right: 20px
+		top: 20px
+		background: transparent
+	.form__header
+		color: $primary
+	.form__submit
+		margin-top: 40px
+
+.hamburger
+	width: 25px
+	height: 20px
+	display: inline-block
+	vertical-align: middle
+	text-align: left
+	border: 3px solid #000
+	border-width: 3px 0
+	cursor: pointer
+	position: relative
+	+tr(border-color .3s)
+	display: none
+	+r(1100)
+		display: inline-block
+	&:hover
+		border-color: $accent
+		&:after
+			background: $accent
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		height: 3px
+		background: #000
+		width: 100%
+		margin-top: -1px
+		+tr(background .3s)
+

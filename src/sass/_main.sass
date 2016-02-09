@@ -10,13 +10,18 @@
 	top: 0
 	left: 0
 	right: 0
+	z-index: 100
 	&__in
 		position: relative
 		height: 100px
 		+vertical
+		+r(1100)
+			text-align: left
 	.logo
 		float: left
 		margin-top: 30px
+		margin-right: 20px
+		+r(1100)
 	.callback
 		float: right
 		margin-top: 20px
@@ -24,6 +29,8 @@
 		text-align: center
 		display: inline-block
 		vertical-align: middle
+
+
 .callback
 	&__phone
 		color: #020624
@@ -34,16 +41,15 @@
 		margin-bottom: 13px
 
 .screen
-	height: calc(100vh - 100px)
-	min-height: 700px
+	height: 100vh
+	padding-top: 100px
+	margin-top: -100px
+	min-height: 950px
 	background-position: center center
 	background-attachment: fixed
 	background-size: cover
 	+vertical
 	color: #fff
-	padding: 50px 0
-	+rh(972)
-		height: auto
 	&__in
 		display: inline-block
 		vertical-align: middle
@@ -80,4 +86,250 @@
 		+clr
 		background: rgba(#161c23, .6)
 		margin-bottom: 50px
+
+.section
+	padding: 110px 0
+	&__row
+		+clr
+		padding: 0 25px
+		margin-bottom: -50px
+	&__col
+		float: left
+		width: 33.333%
+		padding: 0 25px
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 0
+		&_full
+			width: 100%
+	h1, .h1padding
+		color: $primary
+		text-align: center
+		margin-bottom: 70px
+	&__description
+		text-align: center
+		max-width: 960px
+		font-size: 36px
+		margin: 0 auto
+		color: #656565
+		margin-bottom: 40px
+	&__slider
+		max-width: 920px
+		margin: 0 auto
+	&__heading
+		max-width: 1040px
+		margin: 0 auto
+		text-align: center
+		font-size: 18px
+		margin-bottom: 40px
+
+.section-title
+	height: 400px
+	background-position: center top
+	background-attachment: fixed
+	background-size: cover
+	+vertical
+	+r(1024)
+		height: 250px
+	h1, .h1
+		color: #fff
+		display: inline-block
+		vertical-align: middle
+.item
+	&__step
+		text-align: center
+		height: 260px
+		padding-bottom: 35px
+		+agency
+		color: $primary
+		background-image: url('../img/item.svg')
+		background-repeat: no-repeat
+		background-size: 188px 225px
+		background-position: center top
+		position: relative
+		margin-bottom: 20px
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: -40px
+			width: 80px
+			height: 5px
+			background: radial-gradient(center, ellipse contain, #b4b3b3 0%,#fff 100%)
+		span
+			font-size: 98px
+			line-height: 1
+			display: inline-block
+			margin-top: 40px
+	.h3, h3
+		color: $primary
+		text-align: center
+		margin-bottom: 20px
+	p
+		text-align: justify
+		font-size: 18px
+		line-height: 1.65
+
+.marked-text
+	padding: 35px 75px
+	background: $primary
+	color: #fff
+	font-size: 18px
+	line-height: 1.65
+	text-align: justify
+
+.block
+	margin-bottom: 50px
+	&:last-child
+		margin-bottom: 0
+	h3, .h3
+		a
+			color: #3096a8
+			+tr(color .3s)
+			&:hover
+				color: $primary
+	p
+		color: #312e31
+		font-size: 18px
+		> a
+			+bold
+			text-decoration: underline
+			color: inherit
+			&:hover
+				text-decoration: none
+
+.slider
+	padding-bottom: 100px
+	.slick-next,
+	.slick-prev
+		bottom: 0
+		top: auto
+		+tr(border .3s)
+		&:before
+			content: ''
+	.slick-prev
+		+arr(22, 24, #3096a8, l)
+		left: 50%
+		margin-left: -46px
+		&:after
+			content: ''
+			position: absolute
+			top: -15px
+			right: -50px
+			height: 30px
+			width: 4px
+			background: #312e31
+		&:hover
+			border-right-color: $accent
+	.slick-next
+		+arr(22, 24, #3096a8, r)
+		right: 50%
+		margin-right: -50px
+		&:hover
+			border-left-color: $accent
+
+.box
+	text-align: center
+	font-size: 18px
+	&__img
+		border-radius: 50%
+		border: 6px solid $primary
+		height: 156px
+		width: 156px
+		overflow: hidden
+		display: inline-block
+		margin-bottom: 40px
+		+vertical
+		span
+			+agency
+			font-size: 98px
+			display: inline-block
+			vertical-align: middle
+			line-height: 1
+			color: $primary
+		img
+			width: 100%
+			height: auto
+	&__heading
+		color: $primary
+		min-height: 110px
+		margin-bottom: 30px
+		font-size: 24px
+		line-height: 1.1
+		h4, .h4
+			color: #312e31
+
+.box-wrap
+	text-align: center
+	font-size: 0
+	.box
+		width: 400px
+		max-width: 100%
+		padding: 0 50px
+		display: inline-block
+		vertical-align: top
+
+.contacts
+	max-width: 1115px
+	margin: 0 auto
+	+clr
+	&__col1
+		width: percentage( 444px / 1115px )
+		float: left
+	&__col2
+		width: percentage( 671px / 1115px )
+		float: left
+
+.info
+	&__address
+		+bold
+		font-size: 18px
+		color: #312e31
+		margin-bottom: 35px
+	&__tel
+		margin-bottom: 40px
+		a
+			+bold
+			color: $primary
+			font-size: 36px
+
+.form
+	text-align: left
+	.field
+		margin-bottom: 8px
+	.form-error
+		padding-top: 5px
+	.input-text
+		display: block
+		width: 100%
+	&__header
+		color: $accent
+		margin-bottom: 43px
+		line-height: 1
+		&_mod
+			color: $primary
+	&__submit
+		text-align: right
+		margin: 20px 0
+		.btn_red
+			&:hover
+				background: #5f5f5f
+	textarea
+		resize: none
+
+.input-text
+	font-size: 18px
+	padding: 10px 15px 9px
+	color: #312e31
+	border: 0
+	background: #f5f5f5
+	+placeholder
+		+helv
+		color: #a0a0a0
+		
+
+
+
+
 
