@@ -213,6 +213,32 @@ h4, .h4
 		color: $primary
 	.form__submit
 		margin-top: 40px
+.popup-close
+	position: absolute
+	right: 10px
+	top: 10px
+	background: transparent
+.popup-thanks
+	text-align: center
+	z-index: 300
+	box-shadow: 0 0 3px #000
+	width: 300px
+	padding: 25px
+	position: fixed
+	right: 20px
+	top: 20px
+	background: #fff
+	visibility: hidden
+	opacity: 0
+	transition: opacity .3s, visibility .3s
+	&.is-open
+		visibility: visible
+		opacity: 1
+	p
+		font-size: 18px
+	.popup__close
+		right: 10px
+		top: 10px
 
 .hamburger
 	width: 25px

@@ -6,7 +6,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<header class="header">
+	<header class="header js-header">
 		<div class="l">
 			<div class="header__in">
 				<a href="#" class="logo"><i class="i-icon-logo"></i>AsiaCollect</a>
@@ -173,8 +173,64 @@
 			</div>
 		</div>
 	</section>
+	<section id="contacts"  class="section section_no-pad">
+		<div class="map">
+			<div id="map"></div>
+			<script>
+				var map;
+				function initMap() {
+					var customMapType = new google.maps.StyledMapType([
+							{
+								stylers: [
+									{saturation: -99},
+									{visibility: 'on'},
+									{lightness: -15}
+								]
+							}
+							,{
+								name: "Custom Style"
+							}
+						]);
 
-	<section id="contacts" class="section">
+					var customMapTypeId = 'custom_style';
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 17,
+						center: {lat: 1.287687, lng: 103.840188},
+						zoomControl: true,
+						scrollwheel: false,
+						mapTypeControlOptions: {
+							mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+						}
+					});
+
+//					styles for map
+					map.mapTypes.set('custom_style', customMapType);
+					map.setMapTypeId('custom_style');
+
+//					map marker
+					var iconBase = 'img/';
+					var marker = new google.maps.Marker({
+						position: {lat: 1.287687, lng: 103.840188},
+						map: map,
+						height: 76,
+						width: 38,
+						icon: iconBase + 'marker.png'
+					});
+
+//					infowindows
+					var infowindow = new google.maps.InfoWindow({
+						content: '50 CHIN SWEE ROAD<br>#09-04 THONG CHAI BUILDING<br>SINGAPORE 169874'
+					});
+					marker.addListener('click', function() {
+						infowindow.open(map, marker);
+					});
+				}
+			</script>
+			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPLx_osAJ33YNibIjaqX9uH5kbYIlNJVY&callback=initMap" async defer></script>
+		</div>
+
+	</section>
+	<section class="section">
 		<div class="l">
 			<div class="contacts">
 				<div class="contacts__col1">
@@ -238,6 +294,12 @@
 			</form>
 		</div>
 	</div>
+</div>
+
+<div class="popup-thanks js-popup js-thanks-popup">
+	<button class="popup-close js-close-popup"><i class="i-icon-close"></i></button>
+	<p>Thank you!</p>
+	<p>We will contact you soon</p>
 </div>
 </body>
 </html>
