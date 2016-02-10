@@ -79,11 +79,15 @@ strong, b
 .btn
 	font-size: 24px
 	color: #fff
-	padding: 25px 54px 22px
+	padding: 1.042em 2.250em 0.917em
 	text-align: center
 	+bold
 	transition: background .3s, color .3s
 	line-height: 1
+	+r(767)
+		font-size: 18px
+	+r(500)
+		font-size: 14px
 	&_red
 		background: $accent
 		&:hover
@@ -135,18 +139,35 @@ strong, b
 h1, .h1
 	font-size: 60px
 	text-transform: uppercase
+	+r(1024)
+		font-size: 40px
+	+r(500)
+		font-size: 24px
 
 h2, .h2
 	font-size: 36px
 	+bold
+	+r(1024)
+		font-size: 28px
+	+r(500)
+		font-size: 20px
 
 h3, .h3
 	font-size: 30px
 	+bold
+	+r(1024)
+		font-size: 22px
+	+r(500)
+		font-size: 18px
+
 h4, .h4
 	font-size: 24px
 	+bold
-	
+	+r(1024)
+		font-size: 18px
+	+r(500)
+		font-size: 16px
+
 .popup
 	position: fixed
 	left: 0
@@ -176,6 +197,10 @@ h4, .h4
 		position: relative
 		transform: scale(.9)
 		+tr(transform .3s)
+		+r(1024)
+			padding: 40px 60px 30px
+		+r(767)
+			padding: 20px
 	&__close
 		position: absolute
 		right: 20px

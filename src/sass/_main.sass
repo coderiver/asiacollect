@@ -25,6 +25,8 @@
 	.callback
 		float: right
 		margin-top: 20px
+		+r(500)
+			margin-top: 12px
 	.nav
 		text-align: center
 		display: inline-block
@@ -32,6 +34,7 @@
 
 
 .callback
+	text-align: right
 	&__phone
 		color: #020624
 		+bold
@@ -39,17 +42,23 @@
 		letter-spacing: .03em
 		display: block
 		margin-bottom: 13px
+		+r(767)
+			font-size: 24px
+		+r(500)
+			font-size: 18px
 
 .screen
 	height: 100vh
-	padding-top: 100px
 	margin-top: -100px
+	padding: 140px 0 30px
 	min-height: 950px
 	background-position: center center
 	background-attachment: fixed
 	background-size: cover
 	+vertical
 	color: #fff
+	+rh(940)
+		height: auto
 	&__in
 		display: inline-block
 		vertical-align: middle
@@ -69,18 +78,27 @@
 		max-width: 725px
 		margin: 0 auto
 		border-top: 1px solid #8a8d91
-		font-size: 36px
 		padding-top: 15px
 		+bold
+
 	&__col
 		width: 50%
 		float: left
 		padding: 75px 25px
 		font-size: 18px
+		+r(500)
+			font-size: 14px
 		&:first-child
 			padding-left: 85px
+			+r(768)
+				padding-left: 20px
 		&:last-child
 			padding-right: 85px
+			+r(768)
+				padding-right: 20px
+		+r(768)
+			width: 100%
+			padding: 20px
 	&__description
 		text-align: left
 		+clr
@@ -89,10 +107,14 @@
 
 .section
 	padding: 110px 0
+	+r(1023)
+		padding: 50px 0
 	&__row
 		+clr
 		padding: 0 25px
 		margin-bottom: -50px
+		+r(767)
+			padding: 0
 	&__col
 		float: left
 		width: 33.333%
@@ -100,12 +122,18 @@
 		margin-bottom: 50px
 		&:last-child
 			margin-bottom: 0
+		+r(1023)
+			width: 100%
+		+r(767)
+			padding: 0
 		&_full
 			width: 100%
-	h1, .h1padding
+	h1, .h1
 		color: $primary
 		text-align: center
 		margin-bottom: 70px
+		+r(1023)
+			margin-bottom: 35px
 	&__description
 		text-align: center
 		max-width: 960px
@@ -122,6 +150,8 @@
 		text-align: center
 		font-size: 18px
 		margin-bottom: 40px
+		+r(500)
+			font-size: 14px
 
 .section-title
 	height: 400px
@@ -139,21 +169,22 @@
 	&__step
 		text-align: center
 		height: 260px
-		padding-bottom: 35px
 		+agency
 		color: $primary
 		background-image: url('../img/item.svg')
 		background-repeat: no-repeat
-		background-size: 188px 225px
+		background-size: auto 100%
 		background-position: center top
 		position: relative
-		margin-bottom: 20px
+		margin-bottom: 55px
+		+r(767)
+			height: 180px
 		&:after
 			content: ''
 			position: absolute
-			bottom: 0
+			bottom: -35px
 			left: 50%
-			margin-left: -40px
+			margin-left: -37px
 			width: 80px
 			height: 5px
 			background: radial-gradient(center, ellipse contain, #b4b3b3 0%,#fff 100%)
@@ -162,6 +193,8 @@
 			line-height: 1
 			display: inline-block
 			margin-top: 40px
+			+r(767)
+				margin-top: 20px
 	.h3, h3
 		color: $primary
 		text-align: center
@@ -170,6 +203,8 @@
 		text-align: justify
 		font-size: 18px
 		line-height: 1.65
+		+r(500)
+			font-size: 14px
 
 .marked-text
 	padding: 35px 75px
@@ -178,6 +213,10 @@
 	font-size: 18px
 	line-height: 1.65
 	text-align: justify
+	+r(767)
+		padding: 20px
+	+r(500)
+		font-size: 14px
 
 .block
 	margin-bottom: 50px
@@ -192,6 +231,8 @@
 	p
 		color: #312e31
 		font-size: 18px
+		+r(500)
+			font-size: 14px
 		> a
 			+bold
 			text-decoration: underline
@@ -232,6 +273,8 @@
 .box
 	text-align: center
 	font-size: 18px
+	+r(500)
+		font-size: 14px
 	&__img
 		border-radius: 50%
 		border: 6px solid $primary
@@ -259,27 +302,40 @@
 		line-height: 1.1
 		h4, .h4
 			color: #312e31
-
+		+r(829)
+			min-height: auto
 .box-wrap
 	text-align: center
 	font-size: 0
+	margin-bottom: -40px
 	.box
 		width: 400px
 		max-width: 100%
 		padding: 0 50px
 		display: inline-block
 		vertical-align: top
+		margin-bottom: 40px
+		+r(839)
+			width: 100%
 
 .contacts
 	max-width: 1115px
-	margin: 0 auto
 	+clr
+	margin-bottom: -20px
 	&__col1
 		width: percentage( 444px / 1115px )
 		float: left
+		margin-bottom: 20px
+		+r(767)
+			width: 100%
 	&__col2
 		width: percentage( 671px / 1115px )
 		float: left
+		padding-left: 15px
+		margin-bottom: 20px
+		+r(767)
+			width: 100%
+			padding-left: 0
 
 .info
 	&__address
@@ -287,12 +343,16 @@
 		font-size: 18px
 		color: #312e31
 		margin-bottom: 35px
+		+r(500)
+			font-size: 14px
 	&__tel
 		margin-bottom: 40px
 		a
 			+bold
 			color: $primary
 			font-size: 36px
+	img
+		max-width: 100%
 
 .form
 	text-align: left
@@ -324,6 +384,8 @@
 	color: #312e31
 	border: 0
 	background: #f5f5f5
+	+r(500)
+		font-size: 14px
 	+placeholder
 		+helv
 		color: #a0a0a0

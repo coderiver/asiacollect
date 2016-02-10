@@ -34,7 +34,19 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
+	// nav
+	$('.js-menu a').on('click', function(){
+		var link = $(this).attr('href');
 
+		$('html, body').animate({
+			scrollTop: $(link).offset().top - 100
+		}, {
+			duration: 500,
+			easing: "easeInOutCubic"
+		});
+
+		return false;
+	});
 	// form validation
 	(function() {
 		var popup   = $('.js-popup'),
