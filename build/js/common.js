@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$(document).on('click', function() {
 		$('.js-menu').removeClass('is-open');
+		$('.js-callback').removeClass('is-open');
 	});
 
 	// slider
@@ -37,15 +38,27 @@ $(document).ready(function() {
 	// nav
 	$('.js-menu a').on('click', function(){
 		var link = $(this).attr('href');
-
+		var height = $('.header').outerHeight();
 		$('html, body').animate({
-			scrollTop: $(link).offset().top - 100
+			scrollTop: $(link).offset().top - height
 		}, {
 			duration: 500,
 			easing: "easeInOutCubic"
-		});
+		},
+			$('.js-menu').removeClass('is-open')
+		);
 
 		return false;
+	});
+	//open callback
+
+	$('.js-open-callback').on('click', function() {
+		$('.js-callback').addClass('is-open');
+
+		return false;
+	});
+	$('.js-callback').on('click', function(e) {
+		e.stopPropagation();
 	});
 	// form validation
 	(function() {

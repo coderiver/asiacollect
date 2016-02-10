@@ -22,15 +22,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
-.i-icon-close { width: 24px; height: 24px; background-image: url("../img/icons.png"); background-position: -28px -74px; }
+.i-icon-call { width: 48px; height: 48px; background-image: url("../img/icons.png"); background-position: 0px -74px; }
 
-.i-icon-codedby { width: 47px; height: 5px; background-image: url("../img/icons.png"); background-position: -109px -74px; }
+.i-icon-close { width: 48px; height: 48px; background-image: url("../img/icons.png"); background-position: -52px -74px; }
 
-.i-icon-coderiver { width: 49px; height: 5px; background-image: url("../img/icons.png"); background-position: -56px -74px; }
+.i-icon-codedby { width: 47px; height: 5px; background-image: url("../img/icons.png"); background-position: -185px -74px; }
+
+.i-icon-coderiver { width: 49px; height: 5px; background-image: url("../img/icons.png"); background-position: -132px -74px; }
 
 .i-icon-logo { width: 440px; height: 70px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
-.i-icon-mouse { width: 24px; height: 32px; background-image: url("../img/icons.png"); background-position: 0px -74px; }
+.i-icon-mouse { width: 24px; height: 32px; background-image: url("../img/icons.png"); background-position: -104px -74px; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -83,11 +85,13 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .i-icon, [class^="i-icon-"], [class*=" i-icon-"] { display: inline-block; }
 
-.i-icon-logo { background-image: url("../img/icons.png"); width: 220px; height: 35px; background-position: 0px 0px; background-size: 220px 53px; }
+.i-icon-logo { background-image: url("../img/icons.png"); width: 220px; height: 35px; background-position: 0px 0px; background-size: 220px 61px; }
 
-.i-icon-text { background-image: url("../img/icons.png"); width: 12px; height: 12px; background-position: -14px -37px; background-size: 220px 53px; }
+.i-icon-close { background-image: url("../img/icons.png"); width: 24px; height: 24px; background-position: -26px -37px; background-size: 220px 61px; }
 
-body { font-family: "AvenirNextLTPro-Regular", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.4; padding-top: 100px; }
+.i-icon-call { background-image: url("../img/icons.png"); width: 24px; height: 24px; background-position: 0px -37px; background-size: 220px 61px; }
+
+body { font-family: "AvenirNextLTPro-Regular", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.4; padding-top: 100px; min-width: 320px; }
 
 a { text-decoration: none; }
 
@@ -134,9 +138,12 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
 .header { background: #fff; border-bottom: 1px solid #008bce; height: 100px; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
 .header__in { position: relative; height: 100px; text-align: center; font-size: 0; }
 .header__in:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
 .header .logo { float: left; margin-top: 30px; margin-right: 20px; }
 .header .callback { float: right; margin-top: 20px; }
 .header .nav { text-align: center; display: inline-block; vertical-align: middle; }
+
+.m-phone { display: none; position: absolute; right: 0; top: 0; cursor: pointer; padding: 13px; }
 
 .callback { text-align: right; }
 .callback__phone { color: #020624; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial, sans-serif; font-size: 30px; letter-spacing: 0.03em; display: block; margin-bottom: 13px; }
@@ -230,6 +237,8 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
 .input-text::-moz-placeholder { font-family: "helveticaneuecyr-lightitalic", Helvetica, Arial, sans-serif; color: #a0a0a0; }
 .input-text:-ms-input-placeholder { font-family: "helveticaneuecyr-lightitalic", Helvetica, Arial, sans-serif; color: #a0a0a0; }
 .input-text::placeholder { font-family: "helveticaneuecyr-lightitalic", Helvetica, Arial, sans-serif; color: #a0a0a0; }
+@media only screen and (max-width: 1100px) and (max-width: 550px){
+ .header__in{ height: 50px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1100px){
@@ -245,13 +254,14 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
  h3, .h3{ font-size: 22px; }
  h4, .h4{ font-size: 18px; }
  .popup__in{ padding: 40px 60px 30px; }
- .section-title{ height: 250px; } }
+ .section-title{ height: 250px; }
+ .box__heading{ font-size: 18px; } }
 @media only screen and (max-width: 1023px){
  .section{ padding: 50px 0; }
  .section__col{ width: 100%; }
  .section h1, .section .h1{ margin-bottom: 35px; } }
 @media only screen and (max-height: 940px){
- .screen{ height: auto; } }
+ .screen{ height: auto; min-height: auto; } }
 @media only screen and (max-width: 839px){
  .box-wrap .box{ width: 100%; } }
 @media only screen and (max-width: 829px){
@@ -266,18 +276,29 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
  .callback__phone{ font-size: 24px; }
  .section__row{ padding: 0; }
  .section__col{ padding: 0; }
+ .section-title{ height: 150px; }
  .item__step{ height: 180px; }
- .item__step span{ margin-top: 20px; }
+ .item__step span{ margin-top: 22px; font-size: 80px; }
  .marked-text{ padding: 20px; }
+ .box__img{ width: 120px; height: 120px; }
+ .box__img span{ font-size: 80px; }
  .contacts__col1{ width: 100%; }
  .contacts__col2{ width: 100%; padding-left: 0; } }
+@media only screen and (max-width: 550px){
+ .header{ height: 50px; }
+ .header .logo{ margin-top: 5px; }
+ .header .callback{ margin-top: 0; }
+ .m-phone{ display: block; }
+ .callback{ visibility: hidden; opacity: 0; position: fixed; background: #fff; padding: 10px; right: 9px; top: 0; z-index: 100; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; -webkit-transform: scale(0.96) translateY(-100%); -ms-transform: scale(0.96) translateY(-100%); transform: scale(0.96) translateY(-100%); -webkit-transition: visibility 0.3s, opacity 0.3s, -webkit-transform 0.3s; transition: visibility 0.3s, opacity 0.3s, transform 0.3s; }
+ .callback .btn{ width: 100%; }
+ .callback.is-open{ visibility: visible; opacity: 1; -webkit-transform: scale(1) translateY(0); -ms-transform: scale(1) translateY(0); transform: scale(1) translateY(0); }
+ .screen{ padding-top: 90px; } }
 @media only screen and (max-width: 500px){
  .btn{ font-size: 14px; }
  h1, .h1{ font-size: 24px; }
  h2, .h2{ font-size: 20px; }
  h3, .h3{ font-size: 18px; }
  h4, .h4{ font-size: 16px; }
- .header .callback{ margin-top: 12px; }
  .callback__phone{ font-size: 18px; }
  .screen__col{ font-size: 14px; }
  .section__heading{ font-size: 14px; }
@@ -285,8 +306,11 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
  .marked-text{ font-size: 14px; }
  .block p{ font-size: 14px; }
  .box{ font-size: 14px; }
+ .box__heading{ font-size: 16px; }
  .info__address{ font-size: 14px; }
  .input-text{ font-size: 14px; } }
+@media only screen and (max-width: 360px){
+ .m-phone{ margin-right: -15px; padding: 13px 7px; } }
 
 
 

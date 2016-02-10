@@ -1,9 +1,10 @@
 $icons: (0:0)
-$icons: map-merge($icons,(close: (X: -28px, Y:-74px, W: 24px, H: 24px, TW: 440px, TH: 106px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(codedby: (X: -109px, Y:-74px, W: 47px, H: 5px, TW: 440px, TH: 106px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: -56px, Y:-74px, W: 49px, H: 5px, TW: 440px, TH: 106px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 440px, H: 70px, TW: 440px, TH: 106px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(mouse: (X: 0px, Y:-74px, W: 24px, H: 32px, TW: 440px, TH: 106px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(call: (X: 0px, Y:-74px, W: 48px, H: 48px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(close: (X: -52px, Y:-74px, W: 48px, H: 48px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -185px, Y:-74px, W: 47px, H: 5px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -132px, Y:-74px, W: 49px, H: 5px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 440px, H: 70px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mouse: (X: -104px, Y:-74px, W: 24px, H: 32px, TW: 440px, TH: 122px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -39,21 +40,26 @@ $icons: map-merge($icons,(mouse: (X: 0px, Y:-74px, W: 24px, H: 32px, TW: 440px, 
 @mixin sr($i)
 	+sprite-retina($i)	
 
-.i-icon-close
-	width: 24px
-	height: 24px
+.i-icon-call
+	width: 48px
+	height: 48px
 	background-image: url('../img/icons.png')
-	background-position: -28px -74px
+	background-position: 0px -74px
+.i-icon-close
+	width: 48px
+	height: 48px
+	background-image: url('../img/icons.png')
+	background-position: -52px -74px
 .i-icon-codedby
 	width: 47px
 	height: 5px
 	background-image: url('../img/icons.png')
-	background-position: -109px -74px
+	background-position: -185px -74px
 .i-icon-coderiver
 	width: 49px
 	height: 5px
 	background-image: url('../img/icons.png')
-	background-position: -56px -74px
+	background-position: -132px -74px
 .i-icon-logo
 	width: 440px
 	height: 70px
@@ -63,4 +69,4 @@ $icons: map-merge($icons,(mouse: (X: 0px, Y:-74px, W: 24px, H: 32px, TW: 440px, 
 	width: 24px
 	height: 32px
 	background-image: url('../img/icons.png')
-	background-position: 0px -74px
+	background-position: -104px -74px
