@@ -80,8 +80,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: AvenirNextLTPro-Regular; src: url("fonts/AvenirNextLTPro-Regular.eot"); src: url("fonts/AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("fonts/AvenirNextLTPro-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: helveticaneuecyr-lightitalic; src: url("fonts/helveticaneuecyr-lightitalic.eot"); src: url("fonts/helveticaneuecyr-lightitalic.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuecyr-lightitalic.woff2") format("woff2"), url("fonts/helveticaneuecyr-lightitalic.woff") format("woff"), url("fonts/helveticaneuecyr-lightitalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Agency_FB; src: url("fonts/Agency_FB.eot"); src: url("fonts/Agency_FB.eot?#iefix") format("embedded-opentype"), url("fonts/Agency_FB.woff2") format("woff2"), url("fonts/Agency_FB.woff") format("woff"), url("fonts/Agency_FB.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.l { width: 1310px; max-width: 100%; padding: 0 15px; margin: 0 auto; *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
+.l, .screen__in { width: 1310px; max-width: 100%; padding: 0 15px; margin: 0 auto; *zoom: 1; }
+.l:after, .screen__in:after { content: " "; display: table; clear: both; }
 
 .i-icon, [class^="i-icon-"], [class*=" i-icon-"] { display: inline-block; }
 
@@ -113,7 +113,7 @@ strong, b { font-family: "AvenirNextLTPro-Bold", Helvetica, Arial, sans-serif; }
 .nav > li { float: left; margin: 0 5px; }
 .nav > li a { display: inline-block; padding: 0 10px; color: #020624; font-size: 18px; }
 
-h1, .h1 { font-size: 60px; text-transform: uppercase; }
+h1, .h1 { font-size: 60px; text-transform: uppercase; font-weight: normal; }
 
 h2, .h2 { font-size: 36px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial, sans-serif; }
 
@@ -157,7 +157,7 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
 
 .screen { height: 100vh; margin-top: -100px; padding: 140px 0 30px; min-height: 950px; background-position: center center; background-attachment: fixed; background-size: cover; text-align: center; font-size: 0; color: #fff; }
 .screen:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.screen__in { display: inline-block; vertical-align: middle; font-size: 14px; width: 1310px; max-width: 100%; padding: 0 15px; }
+.screen__in { display: inline-block; vertical-align: middle; font-size: 14px; }
 .screen__in > .btn { display: inline-block; margin-bottom: 50px; }
 .screen__header { margin-bottom: 35px; }
 .screen__title { max-width: 800px; margin: 0 auto; }
@@ -186,7 +186,7 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
 
 .item__step { text-align: center; height: 260px; font-family: "Agency_FB", "Courier New", Courier, monospace; color: #50c1d7; background-image: url("../img/item.svg"); background-repeat: no-repeat; background-size: auto 100%; background-position: center top; position: relative; margin-bottom: 55px; }
 .item__step:after { content: ""; position: absolute; bottom: -35px; left: 50%; margin-left: -37px; width: 80px; height: 5px; background: -webkit-radial-gradient(center, ellipse contain, #b4b3b3 0%, #fff 100%); background: radial-gradient(center, ellipse contain, #b4b3b3 0%, #fff 100%); }
-.item__step span { font-size: 98px; line-height: 1; display: inline-block; margin-top: 40px; }
+.item__step span { font-size: 98px; line-height: 1; display: inline-block; margin-top: 65px; }
 .item .h3, .item h3 { color: #50c1d7; text-align: center; margin-bottom: 20px; }
 .item p { text-align: justify; font-size: 18px; line-height: 1.65; }
 
@@ -254,6 +254,9 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
+@media only screen and (max-width: 1400px){
+ .l, .screen__in{ width: 1100px; } }
+
 @media only screen and (max-width: 1100px){
  .nav{ position: fixed; top: 0; left: 0; background: #fff; width: 280px; bottom: 0; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; -webkit-transform: translate(-100%) scale(0.9); -ms-transform: translate(-100%) scale(0.9); transform: translate(-100%) scale(0.9); -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
  .nav.is-open{ -webkit-transform: translate(0) scale(1); -ms-transform: translate(0) scale(1); transform: translate(0) scale(1); }
@@ -299,7 +302,7 @@ h4, .h4 { font-size: 24px; font-family: "AvenirNextLTPro-Bold", Helvetica, Arial
  .section__col{ padding: 0; }
  .section-title{ height: 150px; }
  .item__step{ height: 180px; }
- .item__step span{ margin-top: 22px; font-size: 80px; }
+ .item__step span{ margin-top: 35px; font-size: 80px; }
  .marked-text{ padding: 20px; }
  .box__img{ width: 120px; height: 120px; }
  .box__img span{ font-size: 80px; }
