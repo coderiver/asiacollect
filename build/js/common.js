@@ -36,7 +36,7 @@ $(document).ready(function() {
 	});
 
 	// nav
-	$('.js-menu a').on('click', function(){
+	$('.js-menu-link').on('click', function(){
 		var link = $(this).attr('href');
 		var height = $('.header').outerHeight();
 		$('html, body').animate({
